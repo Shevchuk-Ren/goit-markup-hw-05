@@ -384,6 +384,30 @@ body {
 .i-item:not(:last-child) {
   margin-right: 30px;
 }
+.i-thumb {
+  position: relative;
+}
+
+.i-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  min-width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+  opacity: 0.8;
+}
+.i-thumb .txt {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.142;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
 /*TEAM*/
 
 .s-back {
@@ -577,11 +601,12 @@ body {
   margin-bottom: 9px;
   margin-top: 20px;
 }
+
 .b-content {
   font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.142;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;

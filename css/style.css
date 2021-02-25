@@ -34,6 +34,7 @@ text-transform: uppercase;*/
   --header-footer-fon: #2f303a;
   --nav-text-color: #000000;
   --secondary-btn-bg: #f5f4fa;
+  --timing-fm: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -140,19 +141,25 @@ body {
   min-width: 528px;
   min-height: 581px;
   text-align: right;
-  padding-top: 8px;
-  padding-right: 8px;
+
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 .modal-button {
+  /* position: absolute; */
+  top: 8px;
+  right: 8px;
   width: 30px;
   height: 30px;
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+.modal-svg:hover {
+  outline: none;
+  fill: var(--accent-color);
 }
 .modal-button:focus {
   outline: none;
@@ -242,8 +249,22 @@ body {
   padding-top: 31px;
   padding-bottom: 31px;
 }
-.site-nav .nav-item.current {
+.nav-item.current {
   color: var(--accent-color);
+}
+.nav-item.current {
+  position: relative;
+}
+.nav-item.current::after {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  height: 4px;
+  width: 100%;
+  background-color: var(--accent-color);
+  border-radius: 2px;
 }
 .site-nav .nav-item,
 .contacts .contact-item {
@@ -531,6 +552,9 @@ body {
   display: block;
 }
 
+.project-item:hover .overlay {
+  transform: translateY(0);
+}
 .project-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -539,6 +563,27 @@ body {
   outline: none;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 63px 24px;
+  width: 100%;
+  height: 100%;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.555;
+  letter-spacing: 0.03em;
+  color: var(--primery-white-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0.9;
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-fm);
 }
 .projects .title {
   color: var(--title-text-color);

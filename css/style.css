@@ -133,9 +133,11 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
   opacity: 1;
-  transition: opacity 250ms var(--timing-fm);
+  visibility: visible;
+  transition: opacity 250ms var(--timing-fm), visibility 250ms var(--timing-fm);
 }
 .backdrop.is-hidden {
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
@@ -154,7 +156,7 @@ body {
   border-radius: 4px;
 }
 .modal-button {
-  /* position: absolute; */
+  position: absolute;
   top: 8px;
   right: 8px;
   width: 30px;
@@ -711,8 +713,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: fill 2500ms var(--timing-fm),
-    background-color 2500ms var(--timing-fm);
+  border-radius: 50%;
+  transition: fill 250ms var(--timing-fm),
+    background-color 250ms var(--timing-fm);
 }
 
 .homepages:focus {

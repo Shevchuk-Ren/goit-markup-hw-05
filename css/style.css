@@ -105,7 +105,8 @@ body {
   min-width: 78px;
   padding: 6px 22px;
   border-radius: 4px;
-  transition: background-color 250ms var(--timing-fm);
+  transition: color 250ms var(--timing-fm),
+    background-color 250ms var(--timing-fm), box-shadow 250ms var(--timing-fm);
 }
 .button.secondary:focus,
 .button.primary:focus {
@@ -161,6 +162,9 @@ body {
   background-color: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+}
+.modal-svg {
+  transition: fill 250ms var(--timing-fm);
 }
 .modal-svg:hover {
   outline: none;
@@ -230,6 +234,7 @@ body {
 }
 .site-nav .link {
   color: var(--title-text-color);
+  transition: color 250ms var(--timing-fm);
 }
 
 .logo:focus,
@@ -317,6 +322,11 @@ body {
   border: 1px solid var(--accent-color);
   box-shadow: none !important;
 } */
+.contacts .link,
+.contact-footer.link {
+  transition: color 250ms var(--timing-fm);
+}
+
 .contacts .link:hover,
 .contact-footer.link:hover {
   color: var(--accent-color);
@@ -479,11 +489,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  transition: fill 250ms var(--timing-fm),
+    background-color 250ms var(--timing-fm);
 }
 .soc-lnk:focus {
   outline: none;
   background-color: var(--accent-color);
-  fill: #ffffff;
+  fill: currentColor;
   border-radius: 50%;
 }
 .soc-lnk:hover {
@@ -492,6 +505,7 @@ body {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+
   /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 .soc-icon {
@@ -525,6 +539,7 @@ body {
   border-radius: 4px;
   width: 170px;
   height: 90px;
+  transition: color 250ms var(--timing-fm), border 250ms var(--timing-fm);
 }
 
 .clients-lnk:focus {
@@ -696,6 +711,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: fill 2500ms var(--timing-fm),
+    background-color 2500ms var(--timing-fm);
 }
 
 .homepages:focus {

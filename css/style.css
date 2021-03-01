@@ -246,10 +246,9 @@ body {
   border-radius: 4px;
 }
 .logo:hover {
-  box-shadow: none !important;
 }
+
 .site-nav .link:hover {
-  box-shadow: none !important;
   color: var(--accent-color);
 }
 
@@ -318,12 +317,7 @@ body {
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
 }
-/* .envelope:hover,
-.smartphone:hover {
-  fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
-  box-shadow: none !important;
-} */
+
 .contacts .link,
 .contact-footer.link {
   transition: color 250ms var(--timing-fm);
@@ -332,7 +326,6 @@ body {
 .contacts .link:hover,
 .contact-footer.link:hover {
   color: var(--accent-color);
-  box-shadow: none !important;
 }
 
 /*hero*/
@@ -498,7 +491,7 @@ body {
 .soc-lnk:focus {
   outline: none;
   background-color: var(--accent-color);
-  fill: currentColor;
+  fill: #ffffff;
   border-radius: 50%;
 }
 .soc-lnk:hover {
@@ -652,7 +645,7 @@ body {
 .footer {
   background-color: var(--header-footer-fon);
   color: var(--primery-white-color);
-  padding: 60px 0;
+  /* padding: 60px 0; */
 }
 .footer-b {
   margin-left: 70px;
@@ -672,12 +665,18 @@ body {
   margin-bottom: 9px;
   margin-top: 20px;
 }
-
+.footer-a {
+  padding: 60px 0;
+}
+.footer-b {
+  padding: 72px 0;
+}
 .b-content {
+  display: inline-block;
   font-family: Roboto;
   font-weight: bold;
   font-size: 14px;
-  line-height: 1.142;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;

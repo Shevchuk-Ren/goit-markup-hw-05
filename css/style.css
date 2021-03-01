@@ -239,7 +239,11 @@ body {
   transition: color 250ms var(--timing-fm);
 }
 
-.logo:focus,
+.logo:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--accent-color);
+  border-radius: 4px;
+}
 .site-nav .link:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
@@ -316,7 +320,7 @@ body {
 .contacts .link:focus,
 .f-contacts:focus {
   outline: none;
-  box-shadow: 0 0 0 1px var(--accent-color);
+  /* box-shadow: 0 0 0 1px var(--accent-color); */
   border-radius: 4px;
   color: var(--accent-color);
 }
@@ -686,7 +690,7 @@ body {
 }
 .contact-footer:focus {
   outline: none;
-  box-shadow: 0 0 0 1px var(--accent-color);
+  /* box-shadow: 0 0 0 1px var(--accent-color); */
   border-radius: 4px;
   color: var(--accent-color);
 }

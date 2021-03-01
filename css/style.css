@@ -244,11 +244,13 @@ body {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
+  color: var(--accent-color);
 }
 .logo:hover {
 }
 
-.site-nav .link:hover {
+.site-nav .link:hover,
+.site-nav:focus {
   color: var(--accent-color);
 }
 
@@ -316,6 +318,7 @@ body {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
+  color: var(--accent-color);
 }
 
 .contacts .link,
@@ -685,6 +688,7 @@ body {
   outline: none;
   box-shadow: 0 0 0 1px var(--accent-color);
   border-radius: 4px;
+  color: var(--accent-color);
 }
 .ft-item:not(:last-child) {
   padding-bottom: 9px;
